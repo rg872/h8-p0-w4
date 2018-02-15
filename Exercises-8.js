@@ -2,7 +2,8 @@ function urutkanAbjad(str) {
 
   var test = str.split('');
   test = test.sort();
-  return test;
+  var result = test.join('');
+  return result;
 }
 
 // TEST CASES
