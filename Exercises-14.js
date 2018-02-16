@@ -1,9 +1,30 @@
 function sorting(arrNumber) {
-  
+  for (var i = 0; i < arrNumber.length; i++) {
+    for (var x = 0; x < arrNumber.length; x++) {
+      if (arrNumber[i] > arrNumber[x]) {
+        var holder = arrNumber[i];
+        arrNumber[i] = arrNumber[x];
+        arrNumber[x] = holder;
+      }
+    }
+  }
+
+  return arrNumber;
 }
 
 function getTotal(arrNumber) {
-  // code di sini
+  var count = 0;
+  if (typeof arrNumber !== 'undefined' && arrNumber !== null && arrNumber.length !== null && arrNumber.length > 0) {
+    for (var i = 0; i < arrNumber.length; i++) {
+      if (arrNumber[0] === arrNumber[i]) {
+        count++;
+      }
+    }
+
+    return count;
+  } else {
+    return '\'\'';
+  }
 }
 
 function mostFrequentLargestNumbers(arrNumber) {
@@ -21,5 +42,5 @@ console.log(mostFrequentLargestNumbers([122, 122, 130, 100, 135, 100, 135, 150])
 console.log(mostFrequentLargestNumbers([1, 1, 1, 1]));
 //'angka paling besar adalah 1 dan jumlah kemunculan sebanyak 4 kali'
 
-console.log(countLargestNumbers([]));
+console.log(mostFrequentLargestNumbers([]));
 //''
