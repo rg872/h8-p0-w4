@@ -1,5 +1,16 @@
 function kaliTerusRekursif(angka) {
-  // you can only write your code here!
+  var str = String(angka);
+  var arr = str.split('');
+  var sum = 1;
+  for (var i = 0; i < arr.length; i++) {
+    sum = sum * Number(arr[i]);
+  }
+
+  if (String(sum).length === 1) {
+    return sum;
+  }else {
+    return kaliTerusRekursif(sum);
+  }
 }
 
 // TEST CASES
