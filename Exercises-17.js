@@ -1,5 +1,13 @@
 function totalDigitRekursif(angka) {
-  // you can only write your code here!
+  var str = String(angka);
+  if (str.length === 1) {
+    return angka;
+  } else {
+    var arr = str.split('');
+    var num = Number(arr.shift());
+    var rek = Number(arr.join(''));
+    return num + totalDigitRekursif(rek);
+  }
 }
 
 // TEST CASES
